@@ -14,5 +14,7 @@ int main(void){
                 break;
             }
         }
+    }if(cnt<k){
+        printf("0");
     }
 }

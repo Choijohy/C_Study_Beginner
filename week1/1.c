@@ -10,8 +10,6 @@
 int main(){
     int num; // local variables 
 
-    printf("Write a number");
-
     // &(주소 연산자) : 입력받은 데이터를 뒤에 나온 변수에 저장
     // %d : int타입 정수형
     scanf("%d",&num);
