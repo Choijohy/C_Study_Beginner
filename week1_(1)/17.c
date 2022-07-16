@@ -8,14 +8,16 @@ int main(void){
     add2 = 1; // 맨 처음 열 단위 증가(세로)
     scanf("%d",&n);
     // 맨 앞 줄(열) 증가 for문 
-    for (k=0;n-k>0;k++){
+    for (k=0;k<n;k++){
         int temp,i;
         m += add2;//1,3,6...
-        add2 +=1;//1,2,3...
-        temp = m; // 아래 for문으로 m값이 변경되기 전의 m값 미리 temp에 저장
+        // 아래 for문으로 m값이 변경되기 전의 m값 미리 temp에 저장
+        temp = m; 
+        
+        
         
         // 행 단위(특정 행 안에서 증가) 증가 for문
-        for (i=0; i<n-k; i++){
+        for (i=0; i<n-k; i++){ 
             arr[idx] = m;// n=5 m= 1, 2, 4, 7, 11 
             m+=add; // 1,2,4,7 ..
             add+=1; // 1,2,3 ...
@@ -25,6 +27,7 @@ int main(void){
         printf("\n"); //줄바꿈 
         m = temp;
         add =(k+2);
+        add2 +=1;//1,2,3...
     }
     
 }

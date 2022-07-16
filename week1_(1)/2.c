@@ -9,9 +9,9 @@
 #include <stdio.h>
 
 int main(){
-    int n1, n2, n3, n4, i,sum;
+    int n1, n2, n3, n4, sum;
     char resultArr[3];
-    for (i = 0; i < 3; i++){
+    for (int i = 0; i < 3; i++){
         sum = 0;
         scanf("%d %d %d %d",&n1,&n2,&n3,&n4); // 1010(1개) vs 1 0 1 0(4개)
         sum = n1 + n2 + n3 + n4;
@@ -24,7 +24,7 @@ int main(){
         else { resultArr[i]='E';}
     } 
     // 결과값 출력
-    for (i=0; i<3 ; i++){
+    for (int i=0; i<3 ; i++){
         printf("%c\n",resultArr[i]);
     }  
     return 0;
