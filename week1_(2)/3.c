@@ -15,7 +15,10 @@
 int main(){
     int n,max,maxIdx;
     int cnt=0;
-    int class[1005][6]={0,};
+    /*int class[100][6] = {0,}; -> (error) expected primary-expression before ‘int’
+     Certain words are reserved by c++, such as bool, int, and class.
+    I can't use the name "class" for my variable since it's a reserved keyword.*/
+    int arr[1005][6]={0,}; 
     int result[1005]={0,};
     max = -1;
     maxIdx = 0;
@@ -23,7 +26,7 @@ int main(){
 
     for(int i=0; i<n; i++){
         for(int j=0; j<5; j++){
-            scanf("%d",&class[i][j]);
+            scanf("%d",&arr[i][j]);
         }
     }
 
@@ -33,7 +36,7 @@ int main(){
                 continue;
             }
             for(int k=0; k<5; k++){
-                if(class[i][k]==class[j][k]){
+                if(arr[i][k]==arr[j][k]){
                     cnt ++;
                     break;
                 }
